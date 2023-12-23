@@ -1,14 +1,20 @@
-<p style="color: green"><%= notice %></p>
+<h1>Local Sagrado</h1>
+<% if user_signed_in? %> 
+  <p style="color: green"><%= notice %></p>
 
-<h1>Locals</h1>
+  <h1>Locals</h1>
 
-<div id="locals">
-  <% @locals.each do |local| %>
-    <%= render local %>
-    <p>
-      <%= link_to "Show this local", local %>
-    </p>
-  <% end %>
-</div>
-
+  <div id="locals">
+    <% @locals.each do |local| %>
+      <%= render local %>
+      <p>
+        <%= link_to "Show this local", local %>
+      </p>
+    <% end %>
+  </div>
 <%= link_to "New local", new_local_path %>
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete %> 
+<% else %>
+  <%= button_to "Sign in", new_user_session_path %> 
+<% end %>
+
