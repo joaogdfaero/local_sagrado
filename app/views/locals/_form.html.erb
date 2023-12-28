@@ -1,0 +1,52 @@
+<%= form_with(model: local) do |form| %>
+  <% if local.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(local.errors.count, "error") %> prohibited this local from being saved:</h2>
+
+      <ul>
+        <% local.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nome, style: "display: block" %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div>
+    <%= form.label :localizacao, "Localização", style: "display: block" %>
+    <%= form.text_field :localizacao %>
+  </div>
+
+  <div>
+    <%= form.label :religiao_denominacao, "Religião", style: "display: block" %>
+    <%= form.text_field :religiao_denominacao %>
+  </div>
+
+  <div>
+    <%= form.label :tipo, style: "display: block" %>
+    <%= form.text_field :tipo %>
+  </div>
+
+  <div>
+    <%= form.label :descricao, "Descrição", style: "display: block" %>
+    <%= form.text_area :descricao %>
+  </div>
+
+  <div>
+    <%= form.label :eventos, style: "display: block" %>
+    <%= form.text_area :eventos %>
+  </div>
+
+  <div>
+    <%= form.label :contato, style: "display: block" %>
+    <%= form.text_field :contato %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

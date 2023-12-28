@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  localizacao: MyString
+  religiao_denominacao: MyString
+  tipo: MyString
+  descricao: MyText
+  eventos: MyText
+  contato: MyString
+
+two:
+  nome: MyString
+  localizacao: MyString
+  religiao_denominacao: MyString
+  tipo: MyString
+  descricao: MyText
+  eventos: MyText
+  contato: MyString
