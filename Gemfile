@@ -48,6 +48,9 @@ gem "devise"
 # search form
 gem 'ransack'
 
+# geolocailizacao (endereço para latitude e longitude)
+gem 'geocoder'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
