@@ -1,37 +1,43 @@
-<div id="<%= dom_id local %>">
-  <p>
-    <strong>Nome:</strong>
+<div id="<%= dom_id local %>" class="bg-white p-4 shadow-md rounded-md mb-4">
+
+  <p class="mb-2">
+    <strong class="text-yellow-800">Nome:</strong>
     <%= local.nome %>
   </p>
 
-  <p>
-    <strong>Localização:</strong>
+  <p class="mb-2">
+    <strong class="text-yellow-800">Localização:</strong>
     <%= local.localizacao %>
   </p>
 
-  <p>
-    <strong>Religião:</strong>
+  <p class="mb-2">
+    <strong class="text-yellow-800">Religião:</strong>
     <%= local.religiao_denominacao %>
   </p>
 
-  <p>
-    <strong>Tipo:</strong>
+  <p class="mb-2">
+    <strong class="text-yellow-800">Tipo:</strong>
     <%= local.tipo %>
   </p>
 
-  <p>
-    <strong>Descrição:</strong>
+  <p class="mb-2">
+    <strong class="text-yellow-800">Descrição:</strong>
     <%= local.descricao %>
   </p>
 
-  <p>
-    <strong>Eventos:</strong>
+  <p class="mb-2">
+    <strong class="text-yellow-800">Eventos:</strong>
     <%= local.eventos %>
   </p>
 
-  <p>
-    <strong>Contato:</strong>
+  <p class="mb-2">
+    <strong class="text-yellow-800">Contato:</strong>
     <%= local.contato %>
   </p>
 
+  <div class="mt-4">
+    <%= link_to "Ver detalhes", local, class: "text-blue-500 hover:text-blue-700" %>
+  </div>
+
 </div>
+
