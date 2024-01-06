@@ -3,8 +3,9 @@ class LocalsController < ApplicationController
 
   # GET /locals or /locals.json
   def index
-    @locals = Local.all
-  end
+    @q = Local.ransack(params[:q])
+    @locals = @q.result(distinct: true)
+   end
 
   # GET /locals/1 or /locals/1.json
   def show

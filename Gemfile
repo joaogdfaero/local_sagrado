@@ -45,6 +45,9 @@ gem "bootsnap", require: false
 # authentication
 gem "devise" 
 
+# search form
+gem 'ransack'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
