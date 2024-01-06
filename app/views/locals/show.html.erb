@@ -2,9 +2,12 @@
 
 <%= render @local %>
 
-<div>
-  <%= link_to "Edit this local", edit_local_path(@local) %> |
-  <%= link_to "Back to locals", locals_path %>
+<div class="flex items-center space-x-4 mb-4">
 
-  <%= button_to "Destroy this local", @local, method: :delete %>
+  <%= link_to "Editar este local", edit_local_path(@local), class: "text-yellow-800 hover:text-yellow-600" %>
+  <%= link_to "Voltar para locais", locals_path, class: "text-yellow-800 hover:text-yellow-600" %>
+
+  <%= button_to "Excluir este local", @local, method: :delete, data: { confirm: "Tem certeza?" }, class: "text-yellow-800 hover:text-yellow-600" %>
 </div>
+
+

@@ -6,5 +6,9 @@ class Local < ApplicationRecord
     validates :descricao, presence: true, length: { maximum: 65535 }
     validates :eventos, presence: true, length: { maximum: 65535 }
     validates :contato, presence: true
+
+    def self.ransackable_attributes(auth_object = nil)
+      ["localizacao"]
+    end
   end
   
