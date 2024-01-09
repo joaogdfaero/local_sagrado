@@ -50,12 +50,16 @@
         </p>
       </div>
 
-      <div class="mb-2">
-        <p>
-          <strong class="text-yellow-800">Contato</strong><br>
+     <div class="mb-2">
+      <p>
+        <strong class="text-yellow-800">Contato</strong><br>
+        <% if local.contato.present? && local.contato =~ URI::DEFAULT_PARSER.make_regexp %>
+          <%= link_to local.contato, local.contato, target: "_blank", class: "text-blue-500 hover:underline" %>
+        <% else %>
           <%= local.contato %>
-        </p>
-      </div>
+        <% end %>
+      </p>
+     </div>
 
       <div class="mt-4">
         <%= link_to "Ver detalhes", local, class: "text-blue-500 hover:text-blue-700" %>
