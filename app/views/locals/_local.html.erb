@@ -21,7 +21,11 @@
         </p>
       </div>
 
-     <%= js_map [{latitude: local.latitude, longitude: local.longitude}] %>
+     <%= link_to "Abrir no Maps", "https://www.google.com/maps/search/?api=1&query=#{CGI.escape(local.endereco)}", target: "_blank", style: "font-size: 0.875rem; color: #3490dc; text-decoration: none; hover: #2779bd;" %>
+
+     <% if local.latitude.present? && local.longitude.present? %>
+      <%= js_map [{latitude: local.latitude, longitude: local.longitude}] %>
+     <% end %>
 
       <div class="mb-2 hidden">
         <p>

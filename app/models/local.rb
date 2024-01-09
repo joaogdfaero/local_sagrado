@@ -6,7 +6,6 @@ class Local < ApplicationRecord
   validates :descricao, presence: true, length: { maximum: 65535 }
   validates :eventos, presence: true, length: { maximum: 65535 }
   validates :contato, presence: true
-  validates :cep, presence: true
 
   geocoded_by :endereco
   after_validation :geocode
