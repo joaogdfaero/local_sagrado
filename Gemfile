@@ -50,6 +50,7 @@ gem 'ransack'
 
 # geolocailizacao (endereço para latitude e longitude)
 gem 'geocoder'
+gem 'mapkick-rb'
 
 # Use Sass to process CSS
 # gem "sassc-rails"

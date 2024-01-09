@@ -21,30 +21,7 @@
         </p>
       </div>
 
-      <div class="mb-2">
-        <p>
-          <strong class="text-yellow-800">CEP</strong><br>
-          <%= local.cep %>
-        </p>
-      </div>
-
-      <div class="mb-2">
-        <p>
-          <strong class="text-yellow-800">latitude</strong><br>
-          <%= local.latitude%>
-        </p>
-      </div>
-
-      <div class="mb-2">
-        <p>
-          <strong class="text-yellow-800">longitude</strong><br>
-          <%= local.longitude%>
-        </p>
-      </div>
-
-      <div class="map-container">
-        <div id="map"></div>
-      </div>
+     <%= js_map [{latitude: local.latitude, longitude: local.longitude}] %>
 
       <div class="mb-2 hidden">
         <p>
