@@ -4,6 +4,7 @@
     <title>HolyPlace</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
@@ -11,7 +12,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="bg-gray-100">
     <%= render 'layouts/navbar' %>
     <p class="notice"><%= notice %></p> 
     <p class="alert"><%= alert %></p> 

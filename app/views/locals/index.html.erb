@@ -1,18 +1,36 @@
-<% if user_signed_in? %> 
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+  <% if user_signed_in? %> 
   <p style="color: green"><%= notice %></p>
 
-  <div class="flex items-center space-x-4 mb-4">
-    <%= link_to "Criar local", new_local_path, class: "text-yellow-800 hover:text-yellow-600" %> 
+  <div class="container mx-auto mt-7 max-w-screen-lg">
+    <!-- Search Container -->
+    <div class="mb-4">
+      <%= search_form_for @q do |f| %>
+
+      <div class="flex items-center">
+        <%= f.label :endereco_cont, "Busque por termo", class: 'mr-2'  %>
+        <%= f.search_field :endereco_cont, placeholder: 'Ex: Cidade, Estado, rua e CEP', class: 'p-2 border rounded w-full' %>
+        <%= f.submit 'Buscar', class: 'p-2 bg-blue-500 text-white rounded ml-2' %>
+      </div>
+
+      <% end %>
+    </div>
   </div>
 
   <div id="locals">
     <% @locals.each do |local| %>
-      <%= render local %>
+      <%= render partial: 'shortlocal', locals: { local: local } %>
     <% end %>
   </div>
+  <% else %>
+    <%= button_to "Entrar", new_user_session_path, class: "text-yellow-800 hover:text-yellow-600" %> 
+  <% end %>
+</body>
 
-<% else %>
-  <%= button_to "Entrar", new_user_session_path, class: "text-yellow-800 hover:text-yellow-600" %> 
-<% end %>
 
 
