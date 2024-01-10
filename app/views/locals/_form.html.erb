@@ -20,10 +20,10 @@
     <%= form.label :endereco, "Endereço", style: "display: block" %>
     <%= form.text_field :endereco %>
   </div>
-
-  <div>
+  
+ <div>
     <%= form.label :religiao_denominacao, "Religião", style: "display: block" %>
-    <%= form.text_field :religiao_denominacao %>
+    <%= form.select :religiao_denominacao, Local::RELIGIOES_DENOMINACOES %>
   </div>
 
   <div>

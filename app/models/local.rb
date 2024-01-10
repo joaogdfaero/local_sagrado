@@ -11,6 +11,20 @@ class Local < ApplicationRecord
   after_validation :geocode
 
   def self.ransackable_attributes(auth_object = nil)
-    ["endereco"]
+    ["endereco", "religiao_denominacao"]
   end
+
+  RELIGIOES_DENOMINACOES = [
+    "Católico",
+    "Evangélico",
+    "Protestante",
+    "Ortodoxo",
+    "Anglicano",
+    "Luterano",
+    "Metodista",
+    "Batista",
+    "Pentecostal",
+    "Adventista",
+    "Outro"
+  ].freeze
 end
