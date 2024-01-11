@@ -28,13 +28,6 @@
         </div>
 
       <%= link_to "Abrir no Maps", "https://www.google.com/maps/search/?api=1&query=#{CGI.escape(local.endereco)}", target: "_blank", style: "font-size: 0.875rem; color: #3490dc; text-decoration: none; hover: #2779bd;" %>
-
-        <div class="mb-2 hidden">
-          <p>
-            <strong class="text-yellow-800">Tipo</strong><br>
-            <%= local.tipo %>
-          </p>
-        </div>
       </div>
 
       <div class="flex-1">

@@ -4,7 +4,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 <body class="bg-gray-100">
-  <% if user_signed_in? %> 
   <p style="color: green"><%= notice %></p>
 
   <div class="container mx-auto mt-7 max-w-screen-lg">
@@ -12,12 +11,14 @@
     <div class="mb-4">
       <%= search_form_for @q do |f| %>
 
-      <div class="flex items-center">
-        <%= f.label :endereco_cont, "Busque por termo", class: 'mr-2'  %>
-        <%= f.search_field :endereco_cont, placeholder: 'Ex: Cidade, Estado, rua e CEP', class: 'p-2 border rounded w-full' %>
+      <div class="flex items-center mb-2">
+        <%= f.label :endereco_cont, "Buscar", class: 'mr-2' %>
+        <%= f.search_field :endereco_cont, placeholder: 'Ex: Cidade, Estado e rua ', class: 'p-2 border rounded mr-2 w-full' %>
+        <%= f.label :religiao_denominacao_eq, "Religião", class: 'mr-2' %>
+        <%= f.select :religiao_denominacao_eq, Local::RELIGIOES_DENOMINACOES, { include_blank: true }, class: 'p-2 border rounded w-96' %>
+
         <%= f.submit 'Buscar', class: 'p-2 bg-blue-500 text-white rounded ml-2' %>
       </div>
-
       <% end %>
     </div>
   </div>
@@ -27,9 +28,6 @@
       <%= render partial: 'shortlocal', locals: { local: local } %>
     <% end %>
   </div>
-  <% else %>
-    <%= button_to "Entrar", new_user_session_path, class: "text-yellow-800 hover:text-yellow-600" %> 
-  <% end %>
 </body>
 
 

@@ -3,11 +3,12 @@
 <%= render @local %>
 
 <div class="flex items-center space-x-4 mb-4">
-
-  <%= link_to "Editar este local", edit_local_path(@local), class: "text-yellow-800 hover:text-yellow-600" %>
-  <%= link_to "Voltar para locais", locals_path, class: "text-yellow-800 hover:text-yellow-600" %>
-
-  <%= button_to "Excluir este local", @local, method: :delete, data: { confirm: "Tem certeza?" }, class: "text-yellow-800 hover:text-yellow-600" %>
+  <% if user_signed_in? %>
+    <%= link_to "Editar este grupo", edit_local_path(@local), class: "text-yellow-800 hover:text-yellow-600" %>
+    <%= button_to "Excluir este grupo", @local, method: :delete, data: { confirm: "Tem certeza?" }, class: "text-yellow-800 hover:text-yellow-600" %>
+  <% end %>
+  <%= link_to "Ver todos os grupos", locals_path, class: "text-yellow-800 hover:text-yellow-600" %>
 </div>
+
 
 
