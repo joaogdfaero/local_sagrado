@@ -26,13 +26,6 @@
      <% if local.latitude.present? && local.longitude.present? %>
       <%= js_map [{latitude: local.latitude, longitude: local.longitude}] %>
      <% end %>
-
-      <div class="mb-2 hidden">
-        <p>
-          <strong class="text-yellow-800">Tipo</strong><br>
-          <%= local.tipo %>
-        </p>
-      </div>
     </div>
 
     <div class="flex-1">
