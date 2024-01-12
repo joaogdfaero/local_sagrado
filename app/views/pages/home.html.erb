@@ -34,6 +34,7 @@
       <div class="flex justify-left">
         <%= link_to 'Registrar novo grupo', 'locals/new', class: 'p-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition duration-300' %>
       </div>
+      <img src="<%= asset_path('home_thumb.jpg') %>" alt="Descrição da imagem" class="mt-4 mx-auto w-1/2">
         <p class="mb-4 text-gray-800 italic">
           <br>
             Atualmente temos <%= Local.count %> grupos cadastrados.
