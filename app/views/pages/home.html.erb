@@ -19,7 +19,7 @@
         <%= f.search_field :endereco_cont, placeholder: 'Ex: Cidade, Estado e rua', class: 'p-2 border rounded mb-2 md:mb-0 md:mr-2 w-full md:w-1/2' %>
         <%= f.label :religiao_denominacao_eq, "Religião", class: 'mr-2' %>
         <%= f.select :religiao_denominacao_eq, Local::RELIGIOES_DENOMINACOES, { include_blank: true }, class: 'p-2 border rounded mb-2 md:mb-0 w-full md:w-1/4' %>
-        <%= f.submit 'Buscar', class: 'p-2 bg-blue-500 text-white rounded md:ml-2 w-1/6' %>
+        <%= f.submit 'Buscar', class: 'p-2 bg-blue-500 hover:bg-blue-700 text-white rounded md:ml-2 w-1/6' %>
       </div>
       <% end %>
     </div>
