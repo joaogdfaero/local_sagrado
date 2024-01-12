@@ -1,40 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <style>
+    /* Adicione estilos personalizados aqui, se necessário */
+  </style>
 </head>
 <body class="bg-gray-100">
 
-  <div class="container mx-auto mt-5 mb-10 max-w-screen-lg">
+  <div class="container mx-auto mt-10 mb-10 max-w-screen-lg">
     <!-- Search Container -->
-    <div class="mb-4">
+    <div class="mb-8">
       <%= search_form_for @q do |f| %>
-
-      <div class="flex items-center mb-2">
+      <div class="flex flex-col md:flex-row items-center mb-4">
         <%= f.label :endereco_cont, "Buscar", class: 'mr-2' %>
-        <%= f.search_field :endereco_cont, placeholder: 'Ex: Cidade, Estado e rua', class: 'p-2 border rounded mr-2 w-full' %>
+        <%= f.search_field :endereco_cont, placeholder: 'Ex: Cidade, Estado e rua', class: 'p-2 border rounded mb-2 md:mb-0 md:mr-2 w-full md:w-1/2' %>
         <%= f.label :religiao_denominacao_eq, "Religião", class: 'mr-2' %>
-        <%= f.select :religiao_denominacao_eq, Local::RELIGIOES_DENOMINACOES, { include_blank: true }, class: 'p-2 border rounded w-64' %>
-
-        <%= f.submit 'Buscar', class: 'p-2 bg-blue-500 text-white rounded ml-2' %>
+        <%= f.select :religiao_denominacao_eq, Local::RELIGIOES_DENOMINACOES, { include_blank: true }, class: 'p-2 border rounded mb-2 md:mb-0 w-full md:w-1/4' %>
+        <%= f.submit 'Buscar', class: 'p-2 bg-blue-500 text-white rounded md:ml-2 w-1/6' %>
       </div>
       <% end %>
     </div>
 
-    <div class="bg-gray-200 bg-opacity-90 p-8 rounded-lg">
-      <h1 class="text-4xl font-bold mb-4">Local Sagrado</h1>
-      <p class="mb-4">
-        Seja bem-vindo ao Local Sagrado! Este portal foi pensado para te ajudar grupos da sua religião (melhorar).
-
-        Confira abaixo algumas dicas e boa busca!
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+      <h1 class="text-4xl font-bold mb-4">Grupos de Jovens Cristãos Brasil</h1>
+      <p class="mb-4 text-gray-700">
+        Seja bem-vindo! Este portal foi pensado para te ajudar a encontrar grupos de jovens cristãos perto de você! Faça sua busca nos campos acima. <br> 
+        <br>
+        Já faz parte de um grupo de jovens? Registre seu grupo abaixo:
       </p>
-      <div class="flex justify-center">
-        <%= link_to 'Encontrar igrejas e grupos próximos a mim!', 'trips', class: 'btn btn-primary btn-lg mr-2' %>
-        <%= link_to 'Ver todas as igrejas e grupos disponíveis!', 'trips/new', class: 'btn btn-primary btn-lg' %>
+      <div class="flex justify-left">
+        <%= link_to 'Registrar novo grupo', 'locals/new', class: 'p-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition duration-300' %>
       </div>
+      <img src="<%= asset_path('home_thumb.jpg') %>" alt="Descrição da imagem" class="mt-4 mx-auto w-1/2">
+        <p class="mb-4 text-gray-800 italic">
+          <br>
+            Atualmente temos <%= Local.count %> grupos cadastrados.
+        </p>
     </div>
   </div>
 </body>
 </html>
+
+
+
 
 
