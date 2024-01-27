@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/joaogdfaero/local_sagrado/">
-    <img src="guitarstoreicon-removebg-preview.png" alt="Logo" width="220" height="220">
+    <img src="cross-png.png" alt="Logo" width="220" height="220">
   </a>
 
 <h3 align="center">Local Sagrado</h3>
