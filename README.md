@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/joaogdfaero/local_sagrado/">
-    <img src="cross-png.png" alt="Logo" width="150" height="150">
+    <img src="cross-png.png" alt="Logo" width="100" height="140">
   </a>
 
 <h3 align="center">Local Sagrado</h3>
