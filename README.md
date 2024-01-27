@@ -32,6 +32,8 @@
 
 ## Demonstration video 📺
 
+https://github.com/joaogdfaero/local_sagrado/assets/103076610/40810c15-e931-49be-9d73-67fdc7f3a293
+
 ## Technologies
 * Ruby 3.1.4
 * Rails 7.0.4
