@@ -9,7 +9,6 @@
   <a href="https://github.com/joaogdfaero/local_sagrado/">
     <img src="cross-png.png" alt="Logo" width="100" height="140">
   </a>
-
 <h3 align="center">Jovens Cristãos Brasil</h3>
   <p align="center">
     Website with information on Christian youth groups from all over Brazil. The purpose of the site is to facilitate meetings between young people of the same religion.
