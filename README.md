@@ -58,7 +58,6 @@ https://github.com/joaogdfaero/local_sagrado/assets/103076610/40810c15-e931-49be
 
 ##
 <br>Author: <strong>João Gabriel Dal Forno (joao.dal@acad.ufsm.br)</strong>
-
 <p align="right">(<a href="#readme-top">Back to Top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
