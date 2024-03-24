@@ -27,7 +27,6 @@
 
 ● Users can search for already created sacred sites (using filters)
 
-
 ## Demonstration video 📺
 
 https://github.com/joaogdfaero/local_sagrado/assets/103076610/40810c15-e931-49be-9d73-67fdc7f3a293
